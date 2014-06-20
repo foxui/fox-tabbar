@@ -1,0 +1,89 @@
+<fox-element name="fox-tabbar">
+    <script>
+    (function(env){
+        var fox = env.fox;
+
+        function clearActive() {
+            var activeItem = this.querySelector('.active');
+
+            activeItem && activeItem.classList.remove('active');
+        }
+
+        function getLabelText(item) {
+            var label = item.querySelector('label');
+            var labelText;
+
+            label && (labelText = label.textContent);
+
+            return labelText;
+        }
+
+        fox('fox-tabbar', {
+            lifecycle: {
+                created: function() {
+                    this.classList.add('bar');
+                    this.classList.add('bottom');
+
+                    var items = fox.queryChildren(this, '*');
+                    var me = this;
+
+                    items.forEach(function(item) {
+                        item.addEventListener('click', function() {
+                            clearActive.call(me);
+                            this.classList.add('active');
+
+                            fox.fireEvent(me, 'selected', {
+                                detail: {
+                                    index: items.indexOf(this),
+                                    label: getLabelText(this)
+                                }
+                            });
+                        }, false);
+                    });
+                }
+            },
+
+            methods: {
+                select: function(index) {
+                    var items = fox.queryChildren(this, '*');
+                    var me = this;
+
+                    clearActive.call(this);
+
+                    if (typeof index === 'string') {
+
+                        items.forEach(function(item, idx){
+                            var labelText = getLabelText(item);
+
+                            if (labelText && labelText == index) {
+                                item.classList.add('active');
+
+                                fox.fireEvent(me, 'selected', {
+                                    detail: {
+                                        index: idx,
+                                        label: labelText
+                                    }
+                                });
+                            }
+                        });
+
+                    }
+                    else {
+                        var target = items[index%items.length];
+                        target && target.classList.add('active');
+
+                        var labelText = getLabelText(target);
+
+                        fox.fireEvent(this, 'selected', {
+                            detail: {
+                                index: index%items.length,
+                                label: labelText
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    })(this);
+    </script>
+</fox>

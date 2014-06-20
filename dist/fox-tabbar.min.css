@@ -1,0 +1,9 @@
+/*!
+ * =====================================================
+ * Foxui v0.1.0 (https://github.com/foxui/fox-tabbar)
+ * Copyright 2014 fex-team
+ * Licensed under BSD (https://github.com/foxui/fox-tabbar/blob/master/LICENSE)
+ *
+ * v0.1.0 designed by @fex-team.
+ * =====================================================
+ */fox-tabbar.bar{position:absolute;z-index:1;top:auto;bottom:0;display:-webkit-box;display:-webkit-flex;display:flex;flex-direction:row;height:49px;white-space:nowrap;color:#888;border-top:1px solid #ddd;border-bottom:none;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;-webkit-flex-flow:row;flex-flow:row}fox-tabbar fox-icon.icon{font-size:26px;line-height:32px;display:block;height:32px;vertical-align:top}fox-tabbar>*{display:block;width:auto;text-align:center;color:#888;-webkit-box-flex:1;-webkit-flex:1}fox-tabbar>.active{color:#1284ff}fox-tabbar label{font-size:10px;font-weight:400;line-height:1;display:block;height:17px;margin-bottom:2px;vertical-align:top}

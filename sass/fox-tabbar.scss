@@ -1,0 +1,55 @@
+
+// Variables
+@import "../../fox-core/sass/variables.scss";
+
+// Mixins
+@import "../../fox-core/sass/mixins.scss";
+
+// Components
+
+fox-tabbar{
+
+    &.bar{
+        color: #888;
+        height: 49px;
+        white-space: nowrap;
+        border-bottom:none;
+        border-top: 1px solid #ddd;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        z-index: 1;
+        @include flex-row-container();
+    }
+
+    fox-icon.icon{
+        font-size: 26px;
+        height: 32px;
+        line-height: 32px;
+        display: block;
+        vertical-align: top;
+    }
+
+    & > * {
+        @include flex-row-item-fullfilled();
+        width: auto;
+        text-align: center;
+        color: #888;
+        display: block;
+    }
+
+    & > .active{
+        color: #1284ff;
+    }
+
+    label{
+        display: block;
+        height: 17px;
+        line-height: 1;
+        vertical-align: top;
+        font-size: 10px;
+        font-weight: 400;
+        margin-bottom: 2px;
+    }
+
+}

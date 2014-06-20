@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>搜索</title>
+        <link rel="stylesheet" href="../../fox-core/dist/foxui.css">
+        <link rel="stylesheet" href="../../fox-page/dist/fox-page.css">
+        <link rel="stylesheet" href="../../fox-toolbar/dist/fox-toolbar.css">
+        <link rel="stylesheet" href="../../fox-icon/dist/css/fox-icon.css">
+        <link rel="stylesheet" href="../../fox-page-content/dist/fox-page-content.css">
+        <link rel="stylesheet" href="../dist/fox-tabbar.css">
+        <script src="../../fox-core/dist/foxui.js"></script>
+        <link rel="import" href="../../fox-toolbar/dist/fox-toolbar.html"/>
+        <link rel="import" href="../../fox-icon/dist/fox-icon.html"/>
+        <link rel="import" href="../../fox-page-content/dist/fox-page-content.html"/>
+        <link rel="import" href="../../fox-page/dist/fox-page.html"/>
+        <link rel="import" href="../dist/fox-tabbar.html"/>
+        <style>
+        fox-page-content{
+            padding: 10px;
+        }
+        </style>
+    </head>
+    <body>
+
+        <fox-tabbar>
+            <a href="goods.html" transition="fade">
+                <fox-icon icon="icon-star-filled"></fox-icon>
+                <label>精品推荐</label>
+            </a>
+            <a href="rank.html" transition="fade">
+                <fox-icon icon="icon-list"></fox-icon>
+                <label>排行榜</label>
+            </a>
+            <a href="nearby.html" transition="fade">
+                <fox-icon icon="icon-person"></fox-icon>
+                <label>我的附近</label>
+            </a>
+            <a href="search.html" class="active" transition="fade">
+                <fox-icon icon="icon-search"></fox-icon>
+                <label>搜索</label>
+            </a>
+            <a href="update.html" transition="fade">
+                <fox-icon icon="icon-download"></fox-icon>
+                <label>更新</label>
+            </a>
+        </fox-tabbar>
+        <fox-page class="main-page">
+            <fox-toolbar>
+                <fox-icon icon="icon-compose" class="right"></fox-icon>
+                <h1>搜索</h1>
+            </fox-toolbar>
+
+            <fox-page-content>
+                <p>
+                    安切洛蒂概括其中特点：“刚出发时好像很美，有弧线，但到了中途下坠特别快。整个弧线都不高，门将都反应不过来。”《米兰体育报》把皮尔洛的任意球称为“电梯任意球”，“迅速升到六楼，却又急速降到一层”，够形象了。球都是从人墙这一边飞过，奇门蒂、帕奥莱蒂、西奇尼亚诺三个牺牲者，都没有反应，看着皮球进网，感到吃惊。有人说皮尔洛这种方式像里昂的小儒尼尼奥，安切洛蒂首先就不认可：“儒尼尼奥罚球部位几乎到了脚踝，皮尔洛没有，这完全是他的方式。”
+                </p>
+                <p>
+                    “皮尔洛的任意球很怪，我看到皮球飞向我的左边，我试图向这一侧移动，但它突然变向，从我的另一侧飞进了球网。再给我一次机会我一定不会提前移动……”莱切门将西奇尼亚诺在被皮尔洛的任意球攻破了球门后这样说。皮尔洛频频通过直接任意球破门，人们开始研究他的任意球，有人认为与皮球上气门心的摆放朝向有关，有人认为与比赛用球有关，还有人认为与脚触球的方式有关，实际上高水平的任意球来自苦练，皮尔洛自己则透露，他认真观察过巴乔和小儒尼尼奥的任意球。
+                </p>
+                <p>
+                    当一个旋转物体的旋转角速度矢量与物体飞行速度矢量不重合时，在与旋转角速度矢量和平动速度矢量组成的平面相垂直的方向上将产生一个横向力。在这个横向力的作用下物体飞行轨迹发生偏转的现象称作马格努斯效应。旋转物体之所以能在横向产生力的作用，从物理角度分析，是由于物体旋转可以带动周围流体旋转，使得物体一侧的流体速度增加，另一侧流体速度减小。根据伯努利定理，流体速度增加将导致压强减小，流体速度减小将导致压强增加，这样就导致旋转物体在横向的压力差，并形成横向力。同时由于横向力与物体运动方向相垂直，因此这个力主要改变飞行速度方向，即形成物体运动中的向心力，因而导致物体飞行方向的改变。用位势流理论解释，则旋转物体的飞行运动可以简化为“直匀流+点涡+偶极子”的运动，其中点涡是形成升力的根源。在二维情况下，旋转圆柱绕流的横向力可以用儒可夫斯基定理来计算，即横向力=来流速度 x 流体密度 x 点涡环量。
+                </p>
+            </fox-page-content>
+        </fox-page>
+    </body>
+</html>
