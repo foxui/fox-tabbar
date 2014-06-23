@@ -24,6 +24,9 @@
                     this.classList.add('bar');
                     this.classList.add('bottom');
 
+                    // 如果没有 label 则添加 .no-label class
+                    !(fox.query(this, 'label').length) && this.classList.add('no-label');
+
                     var items = fox.queryChildren(this, '*');
                     var me = this;
 

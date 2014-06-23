@@ -45,6 +45,12 @@ fox-tabbar fox-icon.icon
 
     vertical-align: top;
 }
+fox-tabbar.no-label fox-icon.icon
+{
+    line-height: 49px;
+
+    height: 49px;
+}
 fox-tabbar > *
 {
     display: block;

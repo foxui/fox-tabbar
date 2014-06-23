@@ -11,7 +11,7 @@ fox-tabbar{
 
     &.bar{
         color: #888;
-        height: 49px;
+        height: $bar-tab-height;
         white-space: nowrap;
         border-bottom:none;
         border-top: 1px solid #ddd;
@@ -28,6 +28,13 @@ fox-tabbar{
         line-height: 32px;
         display: block;
         vertical-align: top;
+    }
+
+    &.no-label {
+        fox-icon.icon {
+            height: $bar-tab-height;
+            line-height: $bar-tab-height;
+        }
     }
 
     & > * {

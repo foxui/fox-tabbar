@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Test of fox-tabbar</title>
+        <link rel="stylesheet" href="../../fox-core/dist/foxui.css">
+        <link rel="stylesheet" href="../../fox-page/dist/fox-page.css">
+        <link rel="stylesheet" href="../../fox-page-content/dist/fox-page-content.css">
+        <link rel="stylesheet" href="../../fox-toolbar/dist/fox-toolbar.css">
+        <link rel="stylesheet" href="../dist/fox-tabbar.css">
+        <link rel="stylesheet" href="../../fox-icon/dist/css/fox-icon.css">
+        <script src="../../fox-core/dist/foxui.js"></script>
+        <link rel="import" href="../../fox-icon/dist/fox-icon.html"/>
+        <link rel="import" href="../dist/fox-tabbar.html"/>
+        <link rel="import" href="../../fox-page/dist/fox-page.html"/>
+        <link rel="import" href="../../fox-toolbar/dist/fox-toolbar.html"/>
+        <link rel="import" href="../../fox-page-content/dist/fox-page-content.html"/>
+        <style>
+        fox-page-content{
+            padding: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <fox-tabbar>
+            <!--最外层的标签不限类型，可以是span/div/a等-->
+            <span class="active">
+                <fox-icon icon="icon-star-filled"></fox-icon>
+            </span>
+            <span>
+                <fox-icon icon="icon-list"></fox-icon>
+            </span>
+            <span>
+                <fox-icon icon="icon-person"></fox-icon>
+            </span>
+            <span>
+                <fox-icon icon="icon-search"></fox-icon>
+            </span>
+            <span>
+                <fox-icon icon="icon-download"></fox-icon>
+            </span>
+        </fox-tabbar>
+
+        <fox-page>
+            <fox-toolbar title="精品推荐"></fox-toolbar>
+
+            <fox-page-content>
+                <h3>选中：</h3>
+                <div id="selectedContent">
+
+                </div>
+
+                <p>
+                    <button onclick="document.body.firstElementChild.select(2);">选中第三个 Tab</button>
+                </p>
+            </fox-page-content>
+        </fox-page>
+
+        <script>
+            var tb = document.querySelector('fox-tabbar');
+
+            tb.addEventListener('selected', function(e) {
+                document.querySelector('fox-toolbar').title = e.detail.label;
+                document.querySelector('#selectedContent').innerHTML =
+                '<p>第 ' + (e.detail.index + 1) + ' 个</p>';
+            }, false);
+        </script>
+    </body>
+</html>
