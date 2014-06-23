@@ -27,26 +27,27 @@
     </head>
     <body>
         <fox-tabbar>
-            <a href="#" class="active">
+            <!--最外层的标签不限类型，可以是span/div/a等-->
+            <span class="active">
                 <fox-icon icon="icon-star-filled"></fox-icon>
                 <label>精品推荐</label>
-            </a>
-            <a href="#">
+            </span>
+            <span>
                 <fox-icon icon="icon-list"></fox-icon>
                 <label>排行榜</label>
-            </a>
-            <a href="#">
+            </span>
+            <span>
                 <fox-icon icon="icon-person"></fox-icon>
                 <label>我的附近</label>
-            </a>
-            <a href="#">
+            </span>
+            <span>
                 <fox-icon icon="icon-search"></fox-icon>
                 <label>搜索</label>
-            </a>
-            <a href="#">
+            </span>
+            <span>
                 <fox-icon icon="icon-download"></fox-icon>
                 <label>更新</label>
-            </a>
+            </span>
         </fox-tabbar>
 
         <fox-page>
