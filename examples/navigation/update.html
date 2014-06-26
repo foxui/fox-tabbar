@@ -23,32 +23,31 @@
     <body>
 
         <fox-tabbar>
-            <a href="goods.html" transition="fade">
+            <a href="goods.html" fox-push-mode="single">
                 <fox-icon icon="icon-star-filled"></fox-icon>
                 <label>精品推荐</label>
             </a>
-            <a href="rank.html" transition="fade">
+            <a href="rank.html" fox-push-mode="single">
                 <fox-icon icon="icon-list"></fox-icon>
                 <label>排行榜</label>
             </a>
-            <a href="nearby.html" transition="fade">
+            <a href="nearby.html" fox-push-mode="single">
                 <fox-icon icon="icon-person"></fox-icon>
                 <label>我的附近</label>
             </a>
-            <a href="search.html" transition="fade">
+            <a href="search.html" fox-push-mode="single">
                 <fox-icon icon="icon-search"></fox-icon>
                 <label>搜索</label>
             </a>
-            <a href="update.html" class="active" transition="fade">
+            <a href="update.html" class="active" fox-push-mode="single">
                 <fox-icon icon="icon-download"></fox-icon>
                 <label>更新</label>
             </a>
         </fox-tabbar>
 
         <fox-page class="main-page">
-            <fox-toolbar>
+            <fox-toolbar title="更新">
                 <fox-icon icon="icon-compose" class="right"></fox-icon>
-                <h1>更新</h1>
             </fox-toolbar>
 
             <fox-page-content>
