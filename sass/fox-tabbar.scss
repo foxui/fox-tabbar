@@ -18,7 +18,8 @@ fox-tabbar{
         position: absolute;
         top: auto;
         bottom: 0;
-        z-index: 1;
+        z-index: index($elements, fox-tabbar);
+
         @include flex-row-container();
     }
 
