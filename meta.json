@@ -1,0 +1,14 @@
+{
+    "dependencies": {
+        "css": [
+            "fox-tabbar/dist/css/fox-tabbar.css"
+        ],
+        "import": [
+            "fox-tabbar/dist/fox-tabbar.html"
+        ]
+    },
+    "name":"fox-tabbar",
+    "type":"component",
+    "attributes":[],
+    "events":[]
+}
